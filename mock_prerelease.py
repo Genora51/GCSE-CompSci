@@ -101,6 +101,12 @@ if __name__ == '__main__':
         has_paid.append(has_student_paid)
     # Split into paid and unpaid arrays based on paid/unpaid
     paid_students, unpaid_students = split_paid(names, has_paid)
+    print('PAID STUDENTS:')
+    for student in paid_students:
+        print(student)
+    print('UNPAID STUDENTS:')
+    for student in unpaid_students:
+        print(student)
 
     print('TASK 3')
     print('-'*6)
