@@ -11,7 +11,7 @@ def estimate(student_count):
     """Estimates the cost of a trip, given the number of students."""
 
     # Account for freebies
-    student_count_f = student_count - (student_count // (FREEBIE_NUM + 1))
+    student_count_f = student_count - (student_count // FREEBIE_NUM)
     # Cost of entry
     cost = student_count_f * ENTRY_COST
     # Add coach cost
