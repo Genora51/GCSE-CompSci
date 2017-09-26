@@ -48,5 +48,26 @@ def test_split_paid():
     for index in range(len(names_lists)):
         names = names_lists[index]
         has_paid = has_paids[index]
-        assert mock_prerelease.split_paid(names, has_paid) == (paids[index],
-                                                               unpaids[index])
+        assert mock_prerelease.split_paid(names, has_paid) == \
+            (paids[index], unpaids[index])
+
+
+def test_cost_calculate():
+    paids = [
+        ['Beth', 'Charlie']
+    ]
+    unpaids = [
+        ['Adam', 'Dave', 'Eve']
+    ]
+    average_estimates = [
+        108.57
+    ]
+    costs_list = [
+        (700, 217.14, -482.86)
+    ]
+    for index in range(len(paids)):
+        paid = paids[index]
+        unpaid = unpaids[index]
+        avg_est = average_estimates[index]
+        costs = costs_list[index]
+        assert mock_prerelease.calculate_cost(paid, unpaid, avg_est) == costs
