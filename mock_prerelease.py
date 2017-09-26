@@ -68,7 +68,7 @@ def calculate_cost(paid, unpaid, average_estimate):
     return total_cost, money_collected, total_profit
 
 
-if __name__ == '__main__':
+def main():
     print('TASK 1')
     print('-'*6)
     # Validate number of estimated students
@@ -132,3 +132,7 @@ if __name__ == '__main__':
         profit_loss = 'broken even'
 
     print('The school has {0}.'.format(profit_loss))
+
+
+if __name__ == '__main__':
+    main()
