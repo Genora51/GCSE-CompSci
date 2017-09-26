@@ -11,7 +11,7 @@ def estimate(student_count):
     """Estimates the cost of a trip, given the number of students."""
 
     # Account for freebies
-    student_count_f = student_count - (student_count // (FREEBIE_NUM + 1))
+    student_count_f = student_count - (student_count // FREEBIE_NUM)
     # Cost of entry
     cost = student_count_f * ENTRY_COST
     # Add coach cost
@@ -101,6 +101,12 @@ if __name__ == '__main__':
         has_paid.append(has_student_paid)
     # Split into paid and unpaid arrays based on paid/unpaid
     paid_students, unpaid_students = split_paid(names, has_paid)
+    print('PAID STUDENTS:')
+    for student in paid_students:
+        print(student)
+    print('UNPAID STUDENTS:')
+    for student in unpaid_students:
+        print(student)
 
     print('TASK 3')
     print('-'*6)
