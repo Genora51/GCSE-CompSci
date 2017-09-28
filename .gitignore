@@ -103,6 +103,8 @@ venv.bak/
 # mypy
 .mypy_cache/
 
+.vscode/
+
 # General
 .DS_Store
 .AppleDouble
