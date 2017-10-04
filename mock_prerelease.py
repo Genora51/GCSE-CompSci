@@ -17,7 +17,7 @@ def estimate(student_count):
     # Add coach cost
     cost += COACH_COST
     # Average cost
-    average_cost = round(cost / student_count, 2)
+    average_cost = cost / student_count
     # Return values
     return cost, average_cost
 
@@ -61,7 +61,7 @@ def calculate_cost(paid, unpaid, average_estimate):
     # Total cost of trip
     total_cost, _ = estimate(total_students)
     # Amount collected from paid students
-    money_collected = len(paid) * average_estimate
+    money_collected = round(len(paid) * average_estimate, 2)
     # Total Profit
     total_profit = money_collected - total_cost
     # Return Values
@@ -79,7 +79,7 @@ def main():
     # Calculate estimates
     total_estimate, avg_estimate = estimate(est_stu)
     print('Estimated cost = ${0}'.format(total_estimate))
-    print('Estimated cost per student = ${0}'.format(avg_estimate))
+    print('Estimated cost per student = ${0}'.format(round(avg_estimate, 2)))
 
     print('TASK 2')
     print('-'*6)
@@ -121,6 +121,7 @@ def main():
     print('Overall Cost = ${0}'.format(final_cost))
     print('Total amount collected = ${0}'.format(money_collected))
     # Has a profit or loss been made, or has the school broken even?
+    overall_profit = round(overall_profit, 2)
     if overall_profit > 0:
         # Profit
         profit_loss = 'made a profit of ${0}'.format(overall_profit)
