@@ -135,5 +135,5 @@ def main():
     print('The school has {0}.'.format(profit_loss))
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     main()
