@@ -44,11 +44,11 @@ def split_paid(names, has_paid):
     paid = []
     unpaid = []
     # Add students to lists
-    for student in range(len(names)):
+    for student, name in enumerate(names):
         if has_paid[student]:
-            paid.append(names[student])
+            paid.append(name)
         else:
-            unpaid.append(names[student])
+            unpaid.append(name)
     # Return split lists
     return paid, unpaid
 
