@@ -70,7 +70,7 @@ def calculate_cost(paid, unpaid, average_estimate):
 
 def main():
     print('TASK 1')
-    print('-'*6)
+    print('-' * 6)
     # Validate number of estimated students
     est_stu = None
     while est_stu is None:
@@ -82,7 +82,7 @@ def main():
     print('Estimated cost per student = ${0}'.format(round(avg_estimate, 2)))
 
     print('TASK 2')
-    print('-'*6)
+    print('-' * 6)
     # Declare arrays
     names = []
     has_paid = []
@@ -109,7 +109,7 @@ def main():
         print(student)
 
     print('TASK 3')
-    print('-'*6)
+    print('-' * 6)
     # Calculate overall cost, money collected, and profit
     # using arrays and estimate
     (
